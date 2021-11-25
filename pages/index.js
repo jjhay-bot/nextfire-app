@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from "next/link";
 import Loader from '../components/Loader';
+import toast from 'react-hot-toast';
 
 export default function Home() {
   return (
@@ -13,8 +14,12 @@ export default function Home() {
       }}>
         <a>Jhay's profile</a>
       </Link> */}
+      
+      {/* <Loader show /> */}
 
-      <Loader show />               {/*  show is a props */}
+      <button onClick={() => toast.success('Hello toast!')}>
+        Toast Me!
+      </button>
     </div>
   )
 }
